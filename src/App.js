@@ -26,13 +26,14 @@ function App() {
         }}
       >
         <BrowserRouter>
+        
           {/* Show these three things everywhere but after this the content should be shown according to the routes */}
 
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/results" element={<Journey Component={SearchResults} />} />
-            <Route path="/book-seat" element={<Journey Component={SeatSelection} />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/" element={<Journey Component={Home} />} />
+            <Route path="/results" element={<Journey Component={SearchResults}/>} />
+            <Route path="/book-seats" element={<Journey Component={SeatSelection} />} />
           </Routes>
         </BrowserRouter>
       </JourneyContext.Provider>
